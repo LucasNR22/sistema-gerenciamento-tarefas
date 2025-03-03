@@ -22,7 +22,7 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    private UsuarioDTO converterParaDTO(Usuario usuario) {
+    public UsuarioDTO converterParaDTO(Usuario usuario) {
         UsuarioDTO dto = new UsuarioDTO();
         dto.setId(usuario.getId());
         dto.setNome(usuario.getNome());
@@ -31,7 +31,7 @@ public class UsuarioService {
         return dto;
     }
 
-    private Usuario converterParaEntidade(UsuarioDTO dto) {
+    public Usuario converterParaEntidade(UsuarioDTO dto) {
         Usuario usuario = new Usuario();
         usuario.setId(dto.getId());
         usuario.setNome(dto.getNome());
